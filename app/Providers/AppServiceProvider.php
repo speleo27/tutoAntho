@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -21,8 +24,11 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
+    // add automaticly for use on windows for dev
+
     public function boot()
     {
-        //
+        Schema::defaultStringLength(191);
+        \Blade::setEchoFormat('e(utf8_encode(%s))');
     }
 }
