@@ -12,6 +12,7 @@ class Callout extends Component
     public $socialFacebook;
     public $socialLinkden;
     public $socialGit;
+    public $img;
 
     /**
      * Create a new component instance.
@@ -19,7 +20,7 @@ class Callout extends Component
      * @return void
      */
 
-    public function __construct($title,$desc,$socialTwitter, $socialFacebook, $socialLinkden,$socialGit)
+    public function __construct($title,$desc,$socialTwitter, $socialFacebook, $socialLinkden,$socialGit,$img)
     {
         $this->title = $title;
         $this->desc = $desc;
@@ -27,7 +28,7 @@ class Callout extends Component
         $this->socialFacebook = $socialFacebook;
         $this->socialLinkden = $socialLinkden;
         $this->socialGit = $socialGit;
-
+        $this->img = $img;
     }
 
 
